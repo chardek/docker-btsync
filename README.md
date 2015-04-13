@@ -1,2 +1,2 @@
 # docker-btsync
-Simple btsync docker build.
+Simple btsync docker build. This image just installs a btsync executable with no configuration in */opt/* and runs it as the entry point. Therefore a configuration should be shared as a volume (normally */opt/btsync.conf*). At a minimum, the configuration should specify a device name and a non-random listening port (since the port needs to be exposed by docker). Remember to mount a persistent storage directory (normally */opt/.sync*). Clearly, the actual shared directory or directories should also be mounted as persistent storage directories.
