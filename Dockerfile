@@ -13,3 +13,6 @@ VOLUME [ "/opt/.sync" ]
 
 # Set up the entrypoint
 ENTRYPOINT [ "/opt/btsync", "--nodaemon" ]
+# Default the configuration location
+CMD [ "--config", "/opt/btsync.conf" ]
+
