@@ -11,6 +11,9 @@ RUN cd /opt/ && \
 # Sync volume
 VOLUME [ "/opt/.sync" ]
 
+# Set the working directory
+WORKDIR /opt/
+
 # Set up the entrypoint
 ENTRYPOINT [ "/opt/btsync", "--nodaemon" ]
 # Default the configuration location
